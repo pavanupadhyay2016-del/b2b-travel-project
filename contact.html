@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - B2B TravelPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="font-bold text-2xl text-blue-600">B2B TravelPro</a>
+                </div>
+                <div class="hidden md:flex md:space-x-8">
+                    <a href="index.html" class="font-medium text-gray-500 hover:text-gray-900">Home</a>
+                    <a href="destinations.html" class="font-medium text-gray-500 hover:text-gray-900">Destinations</a>
+                    <a href="services.html" class="font-medium text-gray-500 hover:text-gray-900">Services</a>
+                    <a href="contact.html" class="font-medium text-gray-900 border-b-2 border-blue-600">Contact</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="b2b-portal.html" class="px-5 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors">
+                        Agent Portal
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="destinations.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Destinations</a>
+            <a href="services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="contact.html" class="block px-4 py-2 text-sm text-gray-700 bg-gray-100">Contact</a>
+            <a href="b2b-portal.html" class="block px-4 py-3 m-2 bg-blue-600 text-white font-semibold rounded-lg text-center">Agent Portal</a>
+        </div>
+    </nav>
+
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-extrabold text-gray-900 text-center">Get In Touch</h1>
+            <p class="text-xl text-gray-600 text-center mt-2">We're here to help. Reach out to our B2B team.</p>
+        </div>
+    </header>
+
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Our Office</h3>
+                            <p class="text-gray-600 mt-2">
+                                123 Business Tower, Andheri (East)<br>
+                                Mumbai, Maharashtra, 400093
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Email Us</h3>
+                            <p class="text-gray-600 mt-2">
+                                <a href="mailto:partners@b2btravelpro.com" class="text-blue-600 hover:underline">partners@b2btravelpro.com</a>
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Call Us</h3>
+                            <p class="text-gray-600 mt-2">
+                                +91 98765 43210 (Agent Support)
+                            </p>
+                        </div>
+                    </div>
+
+                    <form action="#" method="POST" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" 
+                                    class="w-full py-3 px-6 bg-blue-600 text-white font-bold text-lg rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 B2B TravelPro. All rights reserved. Built for a project.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

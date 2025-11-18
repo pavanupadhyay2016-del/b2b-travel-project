@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Partner Portal - Travel Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="max-w-4xl mx-auto p-6 md:p-12 my-10">
+        
+        <div class="bg-white shadow-2xl rounded-xl overflow-hidden">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2">
+
+                <div class="p-8 md:p-12">
+
+                    <div id="b2b-form-container">
+                        <h2 class="font-bold text-3xl text-gray-900">Partner With Us</h2>
+                        <p class="text-gray-600 mt-2">Get exclusive access to our B2B rates and dedicated agent support.</p>
+
+                        <form id="b2b-form" class="mt-8 space-y-5">
+                            <div>
+                                <label for="agency-name" class="block text-sm font-medium text-gray-700">Agency Name</label>
+                                <input type="text" id="agency-name" name="agency-name" required 
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="your-name" class="block text-sm font-medium text-gray-700">Your Full Name</label>
+                                <input type="text" id="your-name" name="your-name" required
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <label for="iata" class="block text-sm font-medium text-gray-700">IATA / TIDS Number (if applicable)</label>
+                                <input type="text" id="iata" name="iata"
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <div>
+                                <button type="submit" 
+                                        class="w-full py-3 px-6 bg-blue-600 text-white font-bold text-lg rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300">
+                                    Submit Inquiry
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="thank-you-message" class="hidden text-center py-10">
+                        <svg class="w-16 h-16 mx-auto text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h2 class="font-bold text-3xl text-gray-900 mt-4">Success!</h2>
+                        <p class="text-gray-600 mt-2 text-lg">Thank you for your inquiry. Our partnership manager will contact you within 24 hours.</p>
+                    </div>
+
+                </div>
+
+                <div class="hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?q=80&w=1935&auto=format&fit=crop" 
+                         alt="Business partners shaking hands" class="h-full w-full object-cover">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Get the form and the two containers
+        const b2bForm = document.getElementById('b2b-form');
+        const formContainer = document.getElementById('b2b-form-container');
+        const thankYouMessage = document.getElementById('thank-you-message');
+
+        // 2. Add an event listener for when the form is "submitted"
+        b2bForm.addEventListener('submit', function(event) {
+            
+            // 3. Prevent the form from actually submitting (which would refresh the page)
+            event.preventDefault();
+            
+            // 4. Hide the form container
+            formContainer.classList.add('hidden');
+            
+            // 5. Show the thank you message
+            thankYouMessage.classList.remove('hidden');
+        });
+    </script>
+
+</body>
+</html>
